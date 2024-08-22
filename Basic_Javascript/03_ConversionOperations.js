@@ -35,7 +35,7 @@ let stringNumber = String(someNumber)
 
 let value = 5
 let negValue = -value
-console.log(negValue);
+console.log(negValue)
 
 let str1 = 3
 let str2 = 2

@@ -39,4 +39,21 @@ console.log(Object.entries(tinderUser));
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
 
+const course = {
+    coursename:"Js In Hindi",
+    price: '999',
+    courseInstructor: 'Veeresh Hiremath'
+}
+
+// course.CourceInstructor
+
+const {courseInstructor: instructor} = course // object De - structure
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+
+
+
+
 

@@ -23,3 +23,58 @@ map.set('USA', "United States of America")
 map.set('Fr', "france")
 map.set('IN', "India")
 console.log(map);
+
+
+for (const [key, value] of map){
+    console.log(key, ':-', value);
+}
+
+// const myObject = {
+//     'game1' : 'NFS',
+//     'game2' : 'spiderman'
+// }
+
+// for (const [key,value] of myObject){
+//     console.log(key, ':-', value);
+    
+// }
+
+// For in loop
+
+const myObject1 = {
+    js: 'javascript',
+    cpp: 'c++',
+    rb:'ruby',
+    swift:'swift by app'
+}
+
+for (const key in myObject1) {
+   console.log(`${key} shortcut is for ${myObject1[key]}`);  
+        
+    }
+ const progrmaning = ['js', 'rb', 'py','Java', 'cpp']
+
+ for (const key in progrmaning) {
+    console.log(key);
+    
+ }
+
+ const map1 = new Map();
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "france")
+map.set('IN', "India")
+
+
+for (const key in map1) {
+    console.log(key);
+    
+    
+}
+
+
+// for Each Loop
+
+const coding = ['js', 'rb', 'py','Java', 'cpp']
+
+coding.forEach()

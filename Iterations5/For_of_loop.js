@@ -67,7 +67,7 @@ map.set('IN', "India")
 
 
 for (const key in map1) {
-    console.log(key);
+    //console.log(key);
     
     
 }
@@ -77,4 +77,23 @@ for (const key in map1) {
 
 const coding = ['js', 'rb', 'py','Java', 'cpp']
 
-coding.forEach()
+coding.forEach( function greet(val){
+    //console.log(val);
+    
+} )
+
+coding.forEach( (item) => {
+    console.log(item);
+    
+})
+
+
+function printMe(item){
+    console.log(item);
+    }
+// coding.forEach(printMe)
+
+coding.forEach( (item,index, arr) => {
+    console.log(item, index, arr);
+    
+})

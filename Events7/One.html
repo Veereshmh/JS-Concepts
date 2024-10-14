@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #414141; color: aliceblue">
     <h2>Amazing image</h2>
-    <ul>
+    <ul id="images">
         <li><img width="200px" id="photoshop" src="https://media.istockphoto.com/id/1305448692/photo/shot-of-a-cute-vintage-teapot-in-a-campsite-near-to-lake.jpg?s=2048x2048&w=is&k=20&c=0UvBWFixij_sdRGU-bCE5W-xaYCYsPsTVu_Xw_tEpAA="></li>
         <li><img width="200px" id="japan" src="https://media.istockphoto.com/id/1341703287/photo/campfire.jpg?s=2048x2048&w=is&k=20&c=RRQBSdtSJ4QlGtJENvhihkCFL19CtyR7eNm1lOISJ3k="></li>
         <li><img width="200px" id="river" src="https://media.istockphoto.com/id/506799605/photo/bonfire-on-the-the-river-bank-at-sunset.jpg?s=1024x1024&w=is&k=20&c=WwJXdGOLD4pScFDaQIzob6nMtV5N7UwehRCFYxMp6zk="/></li>
@@ -20,8 +20,30 @@
     // document.getElementById('owl').onclick = function(){
     //     alert('Owl Clicked');
     // }
-    document.getElementById('owl').addEventListener('clicl', function(){
-        alert('Owl Clicked Again');
-    })
+
+    //attachEvent()
+    //jQuery - on
+    //type, timestamp, defaultPrevented
+        //target, toElement, srcElement, currentTarget
+        //clientX, clientY, screenX, screenY
+        /altKey, ctrlKey, shiftKey, keyCode
+
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert('Owl Clicked Again');
+    // })
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e);
+        })
+
+        //Event propogation
+        documet.getElementById('images').addEventListener('click', function(e){
+            console.log('clicked inside the ul');
+            }, false)
+
+        document.getElementById('owl').addEventListener('click', function(){
+            console.log('owl Clicked');
+            
+        }, false)
 </script>
 </html>

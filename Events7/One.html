@@ -13,7 +13,7 @@
         <li><img width="200px" id="river" src="https://media.istockphoto.com/id/506799605/photo/bonfire-on-the-the-river-bank-at-sunset.jpg?s=1024x1024&w=is&k=20&c=WwJXdGOLD4pScFDaQIzob6nMtV5N7UwehRCFYxMp6zk="/></li>
         <li><img width="200px" id="owl" src="https://media.istockphoto.com/id/1263435221/photo/big-hot-bonfire-on-the-banks-of-the-northern-river-sukhona-vologda-region.jpg?s=1024x1024&w=is&k=20&c=tP0EcQWelHjsvtLlbFbit5KmzyRYO-7NsnG1dWhx0qQ="></li>
         <li><img width="200px" id="prayer" src="https://media.istockphoto.com/id/1305448692/photo/shot-of-a-cute-vintage-teapot-in-a-campsite-near-to-lake.jpg?s=2048x2048&w=is&k=20&c=0UvBWFixij_sdRGU-bCE5W-xaYCYsPsTVu_Xw_tEpAA="></li>
-        <li><a style="color:aliceblue" href="#" id="google">Google</a></li>
+        <li><a style="color:aliceblue" href="https://www.google.co.in/" id="google">Google</a></li>
     </ul>
 </body>
 <script>
@@ -26,24 +26,30 @@
     //type, timestamp, defaultPrevented
         //target, toElement, srcElement, currentTarget
         //clientX, clientY, screenX, screenY
-        /altKey, ctrlKey, shiftKey, keyCode
+        //altKey, ctrlKey, shiftKey, keyCode
 
     // document.getElementById('owl').addEventListener('click', function(){
     //     alert('Owl Clicked Again');
     // })
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e);
-        })
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log(e);
+    //     })
 
         //Event propogation
-        documet.getElementById('images').addEventListener('click', function(e){
-            console.log('clicked inside the ul');
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log("clicked inside the ul");
             }, false)
 
-        document.getElementById('owl').addEventListener('click', function(){
-            console.log('owl Clicked');
-            
+        document.getElementById('owl').addEventListener('click', function(e){
+            console.log("owl Clicked");
+            e.stopPropagation();
+        }, false)
+
+
+        document.getElementById('google').addEventListener('click', function(e){
+            e.preventDefault()
+            console.log('google Clicked');            
         }, false)
 </script>
 </html>

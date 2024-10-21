@@ -99,6 +99,10 @@ async function getAllUsers(){
    }
     
 }
+
+
+// fetch
+
 getAllUsers()
 
 
